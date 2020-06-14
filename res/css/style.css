@@ -42,6 +42,10 @@ a {
   color: black;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (max-width: 480px) {
   body {
     margin: 1em;
