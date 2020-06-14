@@ -16,7 +16,7 @@ window.onload = function(){
 
     template: `
       <div>
-        <h1>SWM: Shuffle</h1>
+        <h1><a href="https://www.sleepwithmepodcast.com/" target="_blank">SWM</a>: Shuffle</h1>
 
         <div v-if="isLoading">
           Loading...
