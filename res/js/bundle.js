@@ -16,7 +16,15 @@ window.onload = function(){
 
     template: `
       <div>
-        <h1><a href="https://www.sleepwithmepodcast.com/" target="_blank">SWM</a>: Shuffle</h1>
+        <p>
+          <a href="https://www.sleepwithmepodcast.com/" target="_blank">
+            <img src="res/img/logo.png">
+          </a>
+        </p>
+
+        <h1>SWM: Shuffle</h1>
+
+        <hr>
 
         <div v-if="isLoading">
           Loading...
@@ -24,13 +32,11 @@ window.onload = function(){
 
         <div v-if="!isLoading && track">
           <h3>{{ track.title }}</h3>
-          <div>{{ track.subtitle }}</div>
+          <p>{{ track.subtitle }}</p>
 
-          <br>
-
-          <audio controls :src="track.mp3"></audio>
-
-          <br><br>
+          <p>
+            <audio controls :src="track.mp3"></audio>
+          </p>
 
           <div>
             <button @click="shuffle">
