@@ -17,6 +17,7 @@
   "homepage": "https://github.com/jrc03c/swm-shuffle#readme",
   "dependencies": {
     "csvtojson": "^2.0.10",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "xml-js": "^1.6.11"
   }
 }
