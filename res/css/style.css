@@ -48,6 +48,10 @@ img {
 
 @media (max-width: 480px) {
   body {
-    margin: 1em 0;
+    margin: 1em;
+  }
+
+  .container {
+    height: calc(100vh - 2em);
   }
 }
