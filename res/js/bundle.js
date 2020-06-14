@@ -23,12 +23,20 @@ window.onload = function(){
         </div>
 
         <div v-if="!isLoading && track">
-          <div><b>{{ track.title }}</b></div>
+          <h3>{{ track.title }}</h3>
           <div>{{ track.subtitle }}</div>
 
           <br>
 
           <audio controls :src="track.mp3"></audio>
+
+          <br><br>
+
+          <div>
+            <button @click="shuffle">
+              <b>Shuffle!</b>
+            </button>
+          </div>
         </div>
       </div>
     `,
