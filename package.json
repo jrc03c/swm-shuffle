@@ -1,0 +1,22 @@
+{
+  "name": "swm-shuffle",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "watchify -e res/js/src/index.js -o res/js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrc03c/swm-shuffle.git"
+  },
+  "author": "jrc03c",
+  "bugs": {
+    "url": "https://github.com/jrc03c/swm-shuffle/issues"
+  },
+  "homepage": "https://github.com/jrc03c/swm-shuffle#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "vue": "^2.6.11"
+  }
+}
