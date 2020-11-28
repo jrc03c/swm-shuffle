@@ -53,7 +53,7 @@ window.onload = function(){
     mounted: async function(){
       let self = this
       self.isLoading = true
-      let response = await fetch("res/js/feed.json")
+      let response = await fetch("https://ameyama.com/api/get-swm-shuffle-feed")
       let feed = await response.json()
       Vue.set(self, "feed", feed)
       self.isLoading = false
