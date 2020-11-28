@@ -2438,7 +2438,7 @@ window.onload = function(){
     mounted: async function(){
       let self = this
       self.isLoading = true
-      let response = await fetch("https://ameyama.com/api/get-swm-shuffle-feed")
+      let response = await fetch("https://ameyama.com/api/get-swm-shuffle-feed/")
       let raw = await response.text()
       let feed = JSON.parse(convert.xml2js(raw, {compact: true}))
 
