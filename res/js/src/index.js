@@ -1,4 +1,5 @@
 let Vue = require("vue/dist/vue.min")
+let convert = require("xml-js")
 
 window.onload = function(){
   let app = new Vue({
@@ -54,7 +55,17 @@ window.onload = function(){
       let self = this
       self.isLoading = true
       let response = await fetch("https://ameyama.com/api/get-swm-shuffle-feed")
-      let feed = await response.json()
+      let raw = await response.text()
+      let feed = JSON.parse(convert.xml2js(raw, {compact: true}))
+
+      feed = feed.rss.channel.item.map(function(item){
+        return {
+          title: item["itunes:title"]._text.trim(),
+          subtitle: item["itunes:subtitle"]._text.trim(),
+          mp3: item.enclosure._attributes.url.trim(),
+        }
+      })
+
       Vue.set(self, "feed", feed)
       self.isLoading = false
       self.shuffle()
